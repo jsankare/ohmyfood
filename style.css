@@ -66,4 +66,22 @@ p {
   color: purple;
 }
 
+/* delete grid.scss if not used */
+.header {
+  padding: 1rem 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1000;
+}
+.header__logo {
+  font-family: "Shrikhand", "cursive";
+  margin: 0;
+  text-align: center;
+}
+
+.localisation {
+  display: flex;
+  background-color: rgb(224, 223, 223);
+}
+
 /*# sourceMappingURL=style.css.map */

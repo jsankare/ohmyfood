@@ -1,0 +1,115 @@
+body {
+    display: block;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    
+    & > img {
+        padding: 1rem;
+        width: 80%;
+    }
+}
+
+main {
+    display: block;
+}
+
+.localisation {
+    padding: 1.25rem 1rem;
+    background-color: #f3f3f3;
+    font-size: 1.2rem;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%) inset;
+    text-align: center;
+
+    & i {
+        display: inline;
+        margin: 5px;
+    }
+}
+
+.hero {
+    padding: 32px;
+    text-align: center;
+    background-color: #fafafa;
+
+    & h2 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    & p {
+        margin: 1.7rem 0;
+    }
+}
+
+.running {
+    padding: 20px;
+    
+    &__title {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    &__steps {
+        margin: 0;
+        padding: 0;
+        
+    }
+
+    &__step {
+        width: 95%;
+        padding: 1.5rem;
+        margin: 1rem 0 1rem 0.75rem;
+        box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+        border-radius: 1.25rem;
+        background-color: #f6f6f6;
+    }
+
+    & ol {
+        list-style: none;
+    }
+
+    & i {
+        display: inline;
+        color: #7E7E7E;
+        margin-right: 0.5rem;
+    }
+}
+
+.running__step {    
+    counter-increment: compteListe 1;
+
+    &:before {
+        content: counter(compteListe) " ";
+        background: #9356dc;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        position: absolute;
+        left: 20px;
+    }
+}
+
+.restaurants {
+    background-color: #f6f6f6;
+
+    & .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__title {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+}
+

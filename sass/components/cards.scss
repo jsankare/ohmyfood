@@ -1,10 +1,70 @@
+.restaurant__card  {
+    text-decoration: none;
+    color: black;
+    height: 500px;
+
+    /*&__span {
+        background-color: rgb(176, 226, 195);
+        color: rgb(11, 100, 11);
+        padding: 10px;
+    }*/
+    &__btn {
+        text-align: right;
+        width: 10%;
+        font-size: 1.8rem;
+    }
+
+    &__details {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+    }
+    
+    &--new {
+        &::before{
+            position: relative;
+            content: 'Nouveau';
+            top: 30px;
+            left: 280px;
+            padding: 0.5rem;
+            width: 10rem;
+            background: #96d3ab;
+            color: rgb(22, 161, 75);
+            text-align: center;
+            box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+            font-weight: 600;
+          }
+    }
+}
+
 .restaurant__article {
     
     background-color: white;
-    margin-bottom: 50px;
-    text-decoration: none;
+    margin-bottom: 30px;
+    border-radius: 15px;
 
     & img {
-        border-radius: 15px;
+        border-radius: 15px 15px 0 0;
+        height: 250px;
+        object-fit: cover;
+        text-align: center;
     }
 } 
+
+.restaurant {
+    &__title {
+        font-size: bold;
+        font-weight: 700;
+    }
+}
+
+.test {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #666;
+    color: transparent;
+
+    &--active, &:hover {
+        color: red;
+        -webkit-text-stroke-width: 0;
+    }
+}

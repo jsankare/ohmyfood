@@ -1,0 +1,41 @@
+.flex {
+    display: flex;
+}
+
+.footer {
+    background-color: rgb(83, 83, 83);
+    color: white;
+    
+    > .container {
+        padding: 30px;
+    }
+
+    &__logo {
+        font-size: bold;
+        font-weight: 300;
+        font-family: "Shrikhand", "cursive";
+    }
+
+    &__links {
+        margin-top: 20px;
+    }
+
+    &__list__element {
+        margin-bottom: 10px;
+
+        i {
+            margin-right: 10px;
+            display: inline;
+            
+        }
+
+        .ptitesalope {
+            margin-right: 14px;
+        }
+    }
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+}

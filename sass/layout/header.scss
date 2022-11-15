@@ -1,0 +1,33 @@
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+    
+    & > img {
+        padding: 1rem;
+        width: 80%;
+    }
+}
+
+.menu__header {
+
+    &__container {
+    display: flex;
+    padding: 15px 0;
+
+        a {
+            align-self: center;
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: black;
+            width: 20%;
+            text-align: center;
+        }
+
+        img {
+            width: 15rem;
+            text-align: left;
+        }
+    }
+}

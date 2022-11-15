@@ -53,7 +53,7 @@ q:before, q:after {
   width: 100%;
 }
 
-.hero__btn {
+.hero__btn, .commandBtn {
   padding: 14px;
   text-decoration: none;
   font-weight: 500;
@@ -61,8 +61,20 @@ q:before, q:after {
   border-radius: 100px;
   color: white;
   background-color: #686868;
-  background-image: linear-gradient(338deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: linear-gradient(355deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.commandBtn__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.commandBtn {
+  width: 50%;
+  margin-bottom: 50px;
+  border: white;
 }
 
 .restaurant__card {
@@ -116,12 +128,12 @@ q:before, q:after {
   font-weight: 700;
 }
 
-.test {
+.like {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #666;
   color: transparent;
 }
-.test--active, .test:hover {
+.like--active, .like:hover {
   color: red;
   -webkit-text-stroke-width: 0;
 }
@@ -160,10 +172,6 @@ q:before, q:after {
   color: white;
 }
 
-body {
-  display: block;
-}
-
 header {
   width: 100%;
   display: flex;
@@ -173,6 +181,27 @@ header {
 header > img {
   padding: 1rem;
   width: 80%;
+}
+
+.menu__header__container {
+  display: flex;
+  padding: 15px 0;
+}
+.menu__header__container a {
+  align-self: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+  width: 20%;
+  text-align: center;
+}
+.menu__header__container img {
+  width: 15rem;
+  text-align: left;
+}
+
+body {
+  display: block;
 }
 
 main {
@@ -269,6 +298,73 @@ main {
   font-family: "Roboto";
 }
 
-/* Header */
+.starters, .courses, .desserts {
+  padding: 15px;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+.menu__header {
+  padding: 1rem 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  width: 80%;
+  font-family: "Shrikhand", "cursive";
+}
+.menu__btn {
+  width: 10%;
+}
+.menu__subtitle {
+  text-transform: uppercase;
+}
+.menu__subtitle:after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 0.25rem;
+  background-color: green;
+  margin: 2px 0 20px 0;
+}
+.menu__item {
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+}
+.menu__item__header {
+  box-shadow: none;
+  width: 80%;
+  display: inline;
+  line-height: 1.5rem;
+}
+.menu__item__title {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.menu__item__price {
+  width: 20%;
+  font-style: bold;
+  font-weight: 500;
+}
+.menu__item__validation {
+  visibility: collapse;
+  width: 0px;
+  display: flex;
+  align-self: center;
+}
 
 /*# sourceMappingURL=style.css.map */

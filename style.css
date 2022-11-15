@@ -53,7 +53,217 @@ q:before, q:after {
   width: 100%;
 }
 
-/* delete grid.scss if not used */
+.hero__btn {
+  padding: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(338deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+
+.restaurant__card {
+  text-decoration: none;
+  color: black;
+  height: 500px;
+  /*&__span {
+      background-color: rgb(176, 226, 195);
+      color: rgb(11, 100, 11);
+      padding: 10px;
+  }*/
+}
+.restaurant__card__btn {
+  text-align: right;
+  width: 10%;
+  font-size: 1.8rem;
+}
+.restaurant__card__details {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.restaurant__card--new::before {
+  position: relative;
+  content: "Nouveau";
+  top: 30px;
+  left: 280px;
+  padding: 0.5rem;
+  width: 10rem;
+  background: #96d3ab;
+  color: rgb(22, 161, 75);
+  text-align: center;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+  font-weight: 600;
+}
+
+.restaurant__article {
+  background-color: white;
+  margin-bottom: 30px;
+  border-radius: 15px;
+}
+.restaurant__article img {
+  border-radius: 15px 15px 0 0;
+  height: 250px;
+  object-fit: cover;
+  text-align: center;
+}
+
+.restaurant__title {
+  font-size: bold;
+  font-weight: 700;
+}
+
+.test {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #666;
+  color: transparent;
+}
+.test--active, .test:hover {
+  color: red;
+  -webkit-text-stroke-width: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.footer {
+  background-color: rgb(83, 83, 83);
+  color: white;
+}
+.footer > .container {
+  padding: 30px;
+}
+.footer__logo {
+  font-size: bold;
+  font-weight: 300;
+  font-family: "Shrikhand", "cursive";
+}
+.footer__links {
+  margin-top: 20px;
+}
+.footer__list__element {
+  margin-bottom: 10px;
+}
+.footer__list__element i {
+  margin-right: 10px;
+  display: inline;
+}
+.footer__list__element .ptitesalope {
+  margin-right: 14px;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  display: block;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+header > img {
+  padding: 1rem;
+  width: 80%;
+}
+
+main {
+  display: block;
+}
+
+.localisation {
+  padding: 1.25rem 1rem;
+  background-color: #f3f3f3;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25) inset;
+  text-align: center;
+}
+.localisation i {
+  display: inline;
+  margin: 5px;
+}
+
+.hero {
+  padding: 32px;
+  text-align: center;
+  background-color: #fafafa;
+}
+.hero h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hero p {
+  margin: 1.7rem 0;
+}
+
+.running {
+  padding: 20px;
+}
+.running__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.running__steps {
+  margin: 0;
+  padding: 0;
+}
+.running__step {
+  width: 95%;
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+  border-radius: 1.25rem;
+  background-color: #f6f6f6;
+}
+.running ol {
+  list-style: none;
+}
+.running i {
+  display: inline;
+  color: #7E7E7E;
+  margin-right: 0.5rem;
+}
+
+.running__step {
+  counter-increment: compteListe 1;
+}
+.running__step:before {
+  content: counter(compteListe) " ";
+  background: #9356dc;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: 20px;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 15px 0;
+}
+.restaurants .container {
+  width: 90%;
+  margin: 0 auto;
+}
+.restaurants__title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin: 15px 0;
+  font-weight: 800;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Roboto";

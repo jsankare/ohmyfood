@@ -1,0 +1,44 @@
+@media only screen and (min-width: 768px) {
+    
+    .full-bleed {
+        box-shadow: 0 0 0 100vmax #FaFaFa;
+        clip-path: inset(0 -100vmax);
+    }
+
+    .hero, .running, .restaurants {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .running__step::before {
+        left: 100px;
+    }
+
+    .restaurant__card--new::before {
+        top: 40px;
+        left: 450px;
+    }
+
+    .footer {
+        
+        display: flex;
+        justify-content: center;
+
+        > .container {
+            width: 90%;
+        }
+
+        &__logo {
+            font-size: 1.5rem;
+            margin-left: 10%;
+        }
+
+        &__links {
+            display: flex;
+        }
+
+        &__list__element {
+            text-align: center;
+        }
+    }
+}

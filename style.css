@@ -104,8 +104,8 @@ q:before, q:after {
   left: 280px;
   padding: 0.5rem;
   width: 10rem;
-  background: #96d3ab;
-  color: rgb(22, 161, 75);
+  background: #99E2D0;
+  color: rgb(25, 126, 64);
   text-align: center;
   box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
   font-weight: 600;
@@ -115,6 +115,7 @@ q:before, q:after {
   background-color: white;
   margin-bottom: 30px;
   border-radius: 15px;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
 }
 .restaurant__article img {
   border-radius: 15px 15px 0 0;
@@ -136,6 +137,7 @@ q:before, q:after {
 .like--active, .like:hover {
   color: red;
   -webkit-text-stroke-width: 0;
+  cursor: all-scroll;
 }
 
 .flex {
@@ -164,7 +166,7 @@ q:before, q:after {
   margin-right: 10px;
   display: inline;
 }
-.footer__list__element .ptitesalope {
+.footer__list__element .didier {
   margin-right: 14px;
 }
 .footer a {
@@ -223,7 +225,7 @@ main {
 .hero {
   padding: 32px;
   text-align: center;
-  background-color: #fafafa;
+  background-color: #FaFaFa;
 }
 .hero h2 {
   font-size: 2rem;
@@ -237,8 +239,10 @@ main {
   padding: 20px;
 }
 .running__title {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
+  font-weight: 800;
+  margin: 0;
 }
 .running__steps {
   margin: 0;
@@ -251,6 +255,31 @@ main {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
   border-radius: 1.25rem;
   background-color: #f6f6f6;
+  counter-increment: compteListe 1;
+}
+.running__step:before {
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: absolute;
+  left: 20px;
+}
+.running__step:hover {
+  /*background-color: rgb(243, 208, 243);*/
+  background-color: #e4d5f6;
+  box-shadow: 0.75rem 0.75rem 0.75rem rgba(0, 0, 0, 0.13);
+}
+.running__step:hover i {
+  color: #9356DC;
+}
+.running__step__text {
+  font-weight: 700;
 }
 .running ol {
   list-style: none;
@@ -259,23 +288,6 @@ main {
   display: inline;
   color: #7E7E7E;
   margin-right: 0.5rem;
-}
-
-.running__step {
-  counter-increment: compteListe 1;
-}
-.running__step:before {
-  content: counter(compteListe) " ";
-  background: #9356dc;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  position: absolute;
-  left: 20px;
 }
 
 .restaurants {
@@ -343,6 +355,7 @@ main {
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  /* animation: */
 }
 .menu__item__header {
   box-shadow: none;
@@ -359,12 +372,48 @@ main {
   width: 20%;
   font-style: bold;
   font-weight: 500;
+  align-self: flex-end;
 }
 .menu__item__validation {
   visibility: collapse;
   width: 0px;
   display: flex;
   align-self: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .full-bleed {
+    box-shadow: 0 0 0 100vmax #FaFaFa;
+    clip-path: inset(0 -100vmax);
+  }
+  .hero, .running, .restaurants {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .running__step::before {
+    left: 100px;
+  }
+  .restaurant__card--new::before {
+    top: 40px;
+    left: 450px;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .footer > .container {
+    width: 90%;
+  }
+  .footer__logo {
+    font-size: 1.5rem;
+    margin-left: 10%;
+  }
+  .footer__links {
+    display: flex;
+  }
+  .footer__list__element {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

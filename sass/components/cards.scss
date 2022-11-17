@@ -1,13 +1,20 @@
+.test {
+    // display: flex;
+}
+
 .restaurant__card  {
     text-decoration: none;
     color: black;
     height: 500px;
+    
 
-    /*&__span {
-        background-color: rgb(176, 226, 195);
+    &__span {
+        background-color: $color-tertiary;
         color: rgb(11, 100, 11);
         padding: 10px;
-    }*/
+        border-radius: 4px;
+        font-weight: 600;
+    }
     &__btn {
         text-align: right;
         width: 10%;
@@ -20,7 +27,7 @@
         align-items: center;
     }
     
-    &--new {
+    /*&--new {
         &::before{
             position: relative;
             content: 'Nouveau';
@@ -34,7 +41,7 @@
             box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
             font-weight: 600;
           }
-    }
+    }*/
 }
 
 .restaurant__article {

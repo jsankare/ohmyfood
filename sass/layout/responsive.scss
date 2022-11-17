@@ -1,4 +1,8 @@
-@media only screen and (min-width: 768px) {
+//landing page ------------------------
+
+// tablet
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     
     .full-bleed {
         box-shadow: 0 0 0 100vmax #FaFaFa;
@@ -41,4 +45,98 @@
             text-align: center;
         }
     }
+}
+
+// desktop
+
+@media only screen and (min-width: 1024px) {
+
+    header img {
+        width: 30%;
+    }
+
+    .running {
+
+        &__steps {
+            display: flex;
+            gap: 55px;
+            align-items: center;
+        }
+
+        &__step {
+            width: 33%;
+            padding: 5px;
+            margin: 5px;
+            text-align: center;
+
+            &__text {
+                // center text correctly
+            }
+
+            &:before {
+                position: relative;
+                left: -10px;
+                top: 10px;
+            }
+        }
+    }
+
+    .restaurant {
+
+        &__cards {
+            display: flex;
+        }
+
+        &__card {
+            height: auto;
+        }
+
+        &__article {
+           width: 95%;
+        }
+
+    }
+
+    .footer {
+        
+        display: flex;
+        justify-content: center;
+
+        > .container {
+            width: 90%;
+        }
+
+        &__logo { //need to center
+            font-size: 2rem;
+            margin-left: 30px;
+        }
+
+        &__links {
+            display: flex;
+            font-size: 1.2rem;
+        }
+
+        &__list__element {
+            text-align: center;
+        }
+    }
+
+}
+
+//menus ------------------------
+
+//tablet
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .menu {
+
+        &__header {
+
+            
+
+        }
+
+    }
+
 }

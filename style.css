@@ -81,11 +81,28 @@ q:before, q:after {
   text-decoration: none;
   color: black;
   height: 500px;
-  /*&__span {
-      background-color: rgb(176, 226, 195);
-      color: rgb(11, 100, 11);
-      padding: 10px;
+  /*&--new {
+      &::before{
+          position: relative;
+          content: 'Nouveau';
+          top: 30px;
+          left: 280px;
+          padding: 0.5rem;
+          width: 10rem;
+          background: $color-tertiary;
+          color: rgb(25, 126, 64);
+          text-align: center;
+          box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+          font-weight: 600;
+        }
   }*/
+}
+.restaurant__card__span {
+  background-color: #99E2D0;
+  color: rgb(11, 100, 11);
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 600;
 }
 .restaurant__card__btn {
   text-align: right;
@@ -96,19 +113,6 @@ q:before, q:after {
   padding: 10px;
   display: flex;
   align-items: center;
-}
-.restaurant__card--new::before {
-  position: relative;
-  content: "Nouveau";
-  top: 30px;
-  left: 280px;
-  padding: 0.5rem;
-  width: 10rem;
-  background: #99E2D0;
-  color: rgb(25, 126, 64);
-  text-align: center;
-  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
-  font-weight: 600;
 }
 
 .restaurant__article {
@@ -381,7 +385,7 @@ main {
   align-self: center;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .full-bleed {
     box-shadow: 0 0 0 100vmax #FaFaFa;
     clip-path: inset(0 -100vmax);
@@ -410,6 +414,54 @@ main {
   }
   .footer__links {
     display: flex;
+  }
+  .footer__list__element {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header img {
+    width: 30%;
+  }
+  .running__steps {
+    display: flex;
+    gap: 55px;
+    align-items: center;
+  }
+  .running__step {
+    width: 33%;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+  }
+  .running__step:before {
+    position: relative;
+    left: -10px;
+    top: 10px;
+  }
+  .restaurant__cards {
+    display: flex;
+  }
+  .restaurant__card {
+    height: auto;
+  }
+  .restaurant__article {
+    width: 95%;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+  }
+  .footer > .container {
+    width: 90%;
+  }
+  .footer__logo {
+    font-size: 2rem;
+    margin-left: 30px;
+  }
+  .footer__links {
+    display: flex;
+    font-size: 1.2rem;
   }
   .footer__list__element {
     text-align: center;

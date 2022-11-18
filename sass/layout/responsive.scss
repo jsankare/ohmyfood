@@ -131,12 +131,57 @@
 
     .menu {
 
-        &__header {
-
-            
-
+        &__title {
+            font-size: 2rem;
+            margin: 0 auto;
         }
 
+        &__btn {
+            font-size: 2rem;
+        }
+
+        &__hero {
+            height: 280px;
+        }
     }
+
+    .starters, .courses, .desserts {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10px;
+    } 
+    
+    .footer {
+        > .container {
+            padding: 30px 0px;
+        }
+    }
+}
+
+// desktop
+
+@media only screen and (min-width: 1024px) {
+
+    .menu {
+
+        &__title {
+            font-size: 2rem;
+            margin: 0 auto;
+        }
+
+        &__btn {
+            font-size: 2rem;
+        }
+
+        &__hero {
+            height: 280px;
+        }
+    }
+
+    .starters, .courses, .desserts {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+    } 
 
 }

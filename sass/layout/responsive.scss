@@ -162,6 +162,12 @@
 
 @media only screen and (min-width: 1024px) {
 
+    .starters, .courses, .desserts {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 10px;
+    } 
+    
     .menu {
 
         &__title {
@@ -177,11 +183,4 @@
             height: 280px;
         }
     }
-
-    .starters, .courses, .desserts {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 10px;
-    } 
-
 }

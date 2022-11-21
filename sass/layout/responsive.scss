@@ -56,6 +56,11 @@
     }
 
     .running {
+        
+        &__container {
+            width: 1024px;
+            margin: 0 auto;
+        }
 
         &__steps {
             display: flex;
@@ -167,6 +172,9 @@
     
     .menu {
 
+        width: 1024px;
+        border-radius: 2rem;
+
         &__title {
             font-size: 2rem;
             margin: 0 auto;
@@ -177,7 +185,7 @@
         }
 
         &__hero {
-            height: 280px;
+           height: 4.5rem;
         }
     }
 }

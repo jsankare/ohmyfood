@@ -1,4 +1,74 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap"); /* http://meyerweb.com/eric/tools/css/reset/ 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.easeIn {
+  -webkit-animation: easeIn 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: easeIn 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes easeIn {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes easeIn {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.menus article:nth-child(1n) {
+  animation-delay: 0.5s;
+}
+
+.menus article:nth-child(2n) {
+  animation-delay: 1s;
+}
+
+.menus article:nth-child(3n) {
+  animation-delay: 1.5s;
+}
+
+.menus article:nth-child(4n) {
+  animation-delay: 2s;
+}
+
+.menus article:nth-child(5n) {
+  animation-delay: 2.5s;
+}
+
+.menus article:nth-child(6n) {
+  animation-delay: 3s;
+}
+
+.menus article:nth-child(7n) {
+  animation-delay: 3.5s;
+}
+
+.menus article:nth-child(8n) {
+  animation-delay: 4s;
+}
+
+.menus article:nth-child(9n) {
+  animation-delay: 4.5s;
+}
+
+.menus article:nth-child(10n) {
+  animation-delay: 5s;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -354,36 +424,57 @@ main {
 }
 .menu__item {
   background-color: white;
-  padding: 1rem;
   display: flex;
   border-radius: 0.75rem;
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  /* animation: */
+  position: relative;
+}
+.menu__item:hover .menu__item__validation {
+  background-color: purple;
 }
 .menu__item__header {
   box-shadow: none;
   width: 80%;
   display: inline;
   line-height: 1.5rem;
+  padding: 1rem;
+  min-width: 0;
 }
 .menu__item__title {
   font-style: bold;
   font-weight: 700;
   font-size: 1.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__item__subtext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .menu__item__price {
   width: 20%;
   font-style: bold;
   font-weight: 500;
   align-self: flex-end;
+  padding: 1rem;
 }
 .menu__item__validation {
-  visibility: collapse;
-  width: 0px;
+  background-color: #99E2D0;
+  padding: 2rem;
   display: flex;
   align-self: center;
+  text-align: center;
+  border-radius: 0 0.75rem 0.75rem 0;
+  width: 1rem;
+}
+.menu__item__icon {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 50px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -423,6 +514,10 @@ main {
 @media only screen and (min-width: 1024px) {
   header img {
     width: 30%;
+  }
+  .running__container {
+    width: 1024px;
+    margin: 0 auto;
   }
   .running__steps {
     display: flex;
@@ -495,6 +590,10 @@ main {
     margin: 0 auto;
     margin-top: 10px;
   }
+  .menu {
+    width: 1024px;
+    border-radius: 2rem;
+  }
   .menu__title {
     font-size: 2rem;
     margin: 0 auto;
@@ -503,7 +602,7 @@ main {
     font-size: 2rem;
   }
   .menu__hero {
-    height: 280px;
+    height: 4.5rem;
   }
 }
 

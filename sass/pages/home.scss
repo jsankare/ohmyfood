@@ -73,7 +73,6 @@ main {
         }
 
         &:hover {
-            /*background-color: rgb(243, 208, 243);*/
             background-color: lighten($color: $color-primary, $amount: 30%);
             box-shadow: 0.75rem 0.75rem 0.75rem rgb(0 0 0 / 13%);
 

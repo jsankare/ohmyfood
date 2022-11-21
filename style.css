@@ -81,21 +81,7 @@ q:before, q:after {
   text-decoration: none;
   color: black;
   height: 500px;
-  /*&--new {
-      &::before{
-          position: relative;
-          content: 'Nouveau';
-          top: 30px;
-          left: 280px;
-          padding: 0.5rem;
-          width: 10rem;
-          background: $color-tertiary;
-          color: rgb(25, 126, 64);
-          text-align: center;
-          box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
-          font-weight: 600;
-        }
-  }*/
+  position: relative;
 }
 .restaurant__card__span {
   background-color: #99E2D0;
@@ -113,6 +99,20 @@ q:before, q:after {
   padding: 10px;
   display: flex;
   align-items: center;
+}
+.restaurant__card--new::after {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  content: "Nouveau";
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 70px;
+  background: #99E2D0;
+  color: rgb(25, 126, 64);
+  text-align: center;
+  box-shadow: 4px 4px 15px rgba(26, 35, 126, 0.2);
+  font-weight: 600;
 }
 
 .restaurant__article {
@@ -141,7 +141,9 @@ q:before, q:after {
 .like--active, .like:hover {
   color: purple;
   -webkit-text-stroke-width: 0;
-  cursor: all-scroll;
+  background: -webkit-linear-gradient(rgb(165, 25, 207), rgb(253, 162, 246));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .flex {
@@ -275,7 +277,6 @@ main {
   left: 20px;
 }
 .running__step:hover {
-  /*background-color: rgb(243, 208, 243);*/
   background-color: #e4d5f6;
   box-shadow: 0.75rem 0.75rem 0.75rem rgba(0, 0, 0, 0.13);
 }
@@ -430,20 +431,21 @@ main {
   }
   .running__step {
     width: 33%;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
     text-align: center;
+    position: relative;
   }
   .running__step:before {
-    position: relative;
+    position: absolute;
     left: -10px;
-    top: 10px;
   }
   .restaurant__cards {
     display: flex;
   }
   .restaurant__card {
     height: auto;
+    position: relative;
   }
   .restaurant__article {
     width: 95%;

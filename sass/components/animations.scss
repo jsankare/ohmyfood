@@ -1,47 +1,125 @@
 // Ease In  courses
 
 .easeIn {
-	-webkit-animation: easeIn 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: easeIn 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  -webkit-animation: easeIn 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: easeIn 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 @-webkit-keyframes easeIn {
-    0% {
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  @keyframes easeIn {
-    0% {
-      -webkit-transform: translateY(50px);
-              transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
-    }
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
   }
 
-  @for $i from 1 through 10 {
-    .menus article:nth-child(#{$i}n) {
-        animation-delay: #{$i * 0.5}s;
-    }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-  
 
+@keyframes easeIn {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
 
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
+@for $i from 1 through 10 {
+  .menus article:nth-child(#{$i}n) {
+    animation-delay: #{$i * 0.5}s;
+  }
+}
 
+// validation ------------------------------------------
 
-// validation 
+// slide-left --------------
+@keyframes slideLeft {
+  0% {
+    display: none;
+  }
 
-// loader 
+  100% {
+    display: flex;
+    margin: 0;
+  }
+}
 
+//rotate-left ---------------
+
+.rotateLeft {
+	-webkit-animation: rotateLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: rotateLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes rotateLeft {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+// like fill-in ------------------------------------------
+
+@keyframes fillIn {
+  0% {
+    opacity: 0.1;
+    -webkit-text-stroke-width: 0.2px;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-text-stroke-width: 0px;
+  }
+}
+
+// loader ------------------------------------------
+
+.custom-loader {
+  width: 40px;
+  height: 40px;
+  color:#766DF4;
+  position: relative;
+}
+
+.custom-loader:before {
+  content:'';
+  position: absolute;
+  inset:0;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 0deg,  #0000, currentColor 1deg 120deg,#0000 121deg) top right,
+    conic-gradient(from 120deg,#0000, currentColor 1deg 120deg,#0000 121deg) bottom,
+    conic-gradient(from 240deg,#0000, currentColor 1deg 120deg,#0000 121deg) top left;
+  background-size:40px 40px;
+  background-repeat: no-repeat;
+  animation: sp5 2s infinite cubic-bezier(0.3,1,0,1);
+}
+
+@keyframes sp5 {
+   33%  {inset:-8px;transform: rotate(0deg)}
+   66%  {inset:-8px;transform: rotate(180deg)}
+   100% {inset:0   ;transform: rotate(180deg)}
+}

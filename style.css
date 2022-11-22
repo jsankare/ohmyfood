@@ -68,6 +68,82 @@
   animation-delay: 5s;
 }
 
+@keyframes slideLeft {
+  0% {
+    display: none;
+  }
+  100% {
+    display: flex;
+    margin: 0;
+  }
+}
+.rotateLeft {
+  -webkit-animation: rotateLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: rotateLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes rotateLeft {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+@keyframes rotateLeft {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+}
+@keyframes fillIn {
+  0% {
+    opacity: 0.1;
+    -webkit-text-stroke-width: 0.2px;
+  }
+  100% {
+    opacity: 1;
+    -webkit-text-stroke-width: 0px;
+  }
+}
+.custom-loader {
+  width: 40px;
+  height: 40px;
+  color: #766DF4;
+  position: relative;
+}
+
+.custom-loader:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, rgba(0, 0, 0, 0), currentColor 1deg 120deg, rgba(0, 0, 0, 0) 121deg) top right, conic-gradient(from 120deg, rgba(0, 0, 0, 0), currentColor 1deg 120deg, rgba(0, 0, 0, 0) 121deg) bottom, conic-gradient(from 240deg, rgba(0, 0, 0, 0), currentColor 1deg 120deg, rgba(0, 0, 0, 0) 121deg) top left;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+  animation: sp5 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes sp5 {
+  33% {
+    inset: -8px;
+    transform: rotate(0deg);
+  }
+  66% {
+    inset: -8px;
+    transform: rotate(180deg);
+  }
+  100% {
+    inset: 0;
+    transform: rotate(180deg);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -162,7 +238,7 @@ q:before, q:after {
 }
 .restaurant__card__btn {
   text-align: right;
-  width: 10%;
+  width: 15%;
   font-size: 1.8rem;
 }
 .restaurant__card__details {
@@ -212,8 +288,10 @@ q:before, q:after {
   color: purple;
   -webkit-text-stroke-width: 0;
   background: -webkit-linear-gradient(rgb(165, 25, 207), rgb(253, 162, 246));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: fillIn 1s;
 }
 
 .flex {
@@ -242,7 +320,7 @@ q:before, q:after {
   margin-right: 10px;
   display: inline;
 }
-.footer__list__element .didier {
+.footer__list__element .fixin {
   margin-right: 14px;
 }
 .footer a {
@@ -430,9 +508,18 @@ main {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   max-width: 100%;
   position: relative;
+  overflow: hidden;
+}
+.menu__item:hover {
+  transition: 3s ease;
 }
 .menu__item:hover .menu__item__validation {
-  background-color: purple;
+  display: flex;
+  animation: slideLeft 1s;
+  animation-fill-mode: forwards;
+}
+.menu__item:hover .menu__item__icon {
+  transform: rotate(0deg);
 }
 .menu__item__header {
   box-shadow: none;
@@ -457,24 +544,27 @@ main {
 }
 .menu__item__price {
   width: 20%;
-  font-style: bold;
   font-weight: 500;
   align-self: flex-end;
+  text-align: right;
   padding: 1rem;
 }
 .menu__item__validation {
   background-color: #99E2D0;
-  padding: 2rem;
+  margin: 0 -5rem 0 1rem;
+  width: 4rem;
   display: flex;
-  align-self: center;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  display: none;
   border-radius: 0 0.75rem 0.75rem 0;
-  width: 1rem;
+  text-align: center;
 }
 .menu__item__icon {
-  background-color: white;
-  padding: 1rem;
-  border-radius: 50px;
+  font-size: 1.5rem;
+  color: white;
+  transform: rotate(90deg);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -591,7 +681,7 @@ main {
     margin-top: 10px;
   }
   .menu {
-    width: 1024px;
+    margin-top: 250px;
     border-radius: 2rem;
   }
   .menu__title {

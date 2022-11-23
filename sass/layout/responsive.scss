@@ -172,7 +172,6 @@
     
     .menu {
 
-        margin-top: 250px;
         border-radius: 2rem;
 
         &__title {
@@ -185,7 +184,24 @@
         }
 
         &__hero {
-           height: 4.5rem;
+           height: 450px;
+           overflow: hidden;
+
+           &--french {
+            object-position: 0 -500px;
+           }
+
+           &--enchanted {
+            object-position: 0 -400px;
+           }
+
+           &--senses {
+            object-position: 0 -550px;
+           }
+
+           &--taste {
+            object-position: 0 -500px;
+           }
         }
     }
 }

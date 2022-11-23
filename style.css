@@ -510,8 +510,12 @@ header {
   justify-content: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
 }
-header > img {
-  padding: 1rem;
+header h1 {
+  margin-top: 1rem;
+  width: fit-content;
+  text-align: center;
+}
+header h1 img {
   width: 80%;
 }
 
@@ -651,7 +655,7 @@ main {
   position: relative;
 }
 .menu__header {
-  padding: 1rem 2rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -859,7 +863,6 @@ main {
     margin-top: 10px;
   }
   .menu {
-    margin-top: 250px;
     border-radius: 2rem;
   }
   .menu__title {
@@ -870,7 +873,20 @@ main {
     font-size: 2rem;
   }
   .menu__hero {
-    height: 4.5rem;
+    height: 450px;
+    overflow: hidden;
+  }
+  .menu__hero--french {
+    object-position: 0 -500px;
+  }
+  .menu__hero--enchanted {
+    object-position: 0 -400px;
+  }
+  .menu__hero--senses {
+    object-position: 0 -550px;
+  }
+  .menu__hero--taste {
+    object-position: 0 -500px;
   }
 }
 

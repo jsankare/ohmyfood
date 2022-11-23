@@ -30,6 +30,7 @@
 
     &__btn {
         width: 10%;
+        cursor: pointer;
     }
 
     &__subtitle {
@@ -60,6 +61,7 @@
                 display: flex;
                 animation: slideLeft 1s;
                 animation-fill-mode: forwards;
+                cursor: pointer;
             }
             .menu__item__icon {
                 transform: rotate(0deg);

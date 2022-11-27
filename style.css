@@ -814,6 +814,9 @@ main {
     height: auto;
     position: relative;
   }
+  .restaurant__card--new::after {
+    right: 30px;
+  }
   .restaurant__article {
     width: 95%;
   }

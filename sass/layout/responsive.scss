@@ -91,6 +91,10 @@
         &__card {
             height: auto;
             position: relative;
+            
+            &--new::after{
+                right: 30px;
+            }
         }
 
         &__article {

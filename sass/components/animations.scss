@@ -167,8 +167,8 @@
 		-webkit-border-radius: 100%;
 		-moz-border-radius: 100%;
 	border: 7px solid transparent;
-	border-bottom: 7px solid rgba(146,86,220,0.98);
-	border-left: 7px solid rgb(146,86,220);
+	border-bottom: 7px solid $color-primary;
+	border-left: 7px solid $color-primary;
 	animation: cssload-spinR 2.3s linear infinite;
 		-o-animation: cssload-spinR 2.3s linear infinite;
 		-ms-animation: cssload-spinR 2.3s linear infinite;
@@ -189,8 +189,8 @@
 	height: 69px;
 	width: 69px;
 	border: 4px solid transparent;
-	border-top: 4px solid rgb(15,247,158);
-	border-right: 4px solid rgb(15,247,158);
+	border-top: 4px solid $color-tertiary;
+	border-right: 4px solid $color-tertiary;
 	animation: cssload-spinL 0.86s linear infinite;
 		-o-animation: cssload-spinL 0.86s linear infinite;
 		-ms-animation: cssload-spinL 0.86s linear infinite;
@@ -208,7 +208,7 @@
 	height: 14px;
 	width: 14px;
 	background: transparent;
-	border: 3px solid rgb(153,226,208);
+	border: 3px solid $color-secondary;
 	top: 35.5%;
 	left: 35.5%;
 }

@@ -386,6 +386,11 @@ q:before, q:after {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
+.hero__btn:hover, .commandBtn:hover {
+  transition: 0.5s;
+  filter: brightness(110%);
+  box-shadow: 0.35rem 0.35rem 12px rgba(0, 0, 0, 0.45);
+}
 
 .commandBtn__container {
   width: 100%;
@@ -451,7 +456,7 @@ q:before, q:after {
 }
 
 .restaurant__title {
-  font-size: bold;
+  font-weight: bold;
   font-weight: 700;
 }
 
@@ -482,7 +487,7 @@ q:before, q:after {
   padding: 30px;
 }
 .footer__logo {
-  font-size: bold;
+  font-weight: bold;
   font-weight: 300;
   font-family: "Shrikhand", "cursive";
 }
@@ -502,6 +507,7 @@ q:before, q:after {
 .footer a {
   text-decoration: none;
   color: white;
+  font-family: roboto;
 }
 
 header {
@@ -509,6 +515,14 @@ header {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+}
+header a {
+  align-self: center;
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+  width: 35px;
 }
 header h1 {
   margin-top: 1rem;
@@ -522,18 +536,11 @@ header h1 img {
 .menu__header__container {
   display: flex;
   padding: 15px 0;
+  justify-content: center;
 }
-.menu__header__container a {
-  align-self: center;
-  font-size: 1.8rem;
-  text-decoration: none;
-  color: black;
-  width: 20%;
-  text-align: center;
-}
-.menu__header__container img {
+.menu__header__container h1 {
   width: 15rem;
-  text-align: left;
+  align-self: flex-start;
 }
 
 body {
@@ -712,7 +719,7 @@ main {
   min-width: 0;
 }
 .menu__item__title {
-  font-style: bold;
+  font-weight: bold;
   font-weight: 700;
   font-size: 1.1rem;
   overflow: hidden;

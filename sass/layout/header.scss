@@ -3,6 +3,15 @@ header {
     display: flex;
     justify-content: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
+
+    a {
+        align-self: center;
+        text-align: center;
+        font-size: 1.8rem;
+        text-decoration: none;
+        color: black;
+        width: 35px;
+    }
     
     h1 {
         margin-top: 1rem;
@@ -20,19 +29,16 @@ header {
     &__container {
     display: flex;
     padding: 15px 0;
+    justify-content: center;
 
-        a {
-            align-self: center;
-            font-size: 1.8rem;
-            text-decoration: none;
-            color: black;
-            width: 20%;
-            text-align: center;
-        }
+    a {
+        //mettre à gauche
+    }
 
-        img {
+
+        h1 {
             width: 15rem;
-            text-align: left;
+            align-self: flex-start;
         }
     }
 }

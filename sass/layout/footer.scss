@@ -11,7 +11,7 @@
     }
 
     &__logo {
-        font-size: bold;
+        font-weight: bold;
         font-weight: 300;
         font-family: "Shrikhand", "cursive";
     }
@@ -29,7 +29,7 @@
             
         }
 
-        .fixin /*alignement relou icon footer*/{
+        .fixin {
             margin-right: 14px;
         }
     }
@@ -37,5 +37,6 @@
     & a {
         text-decoration: none;
         color: white;
+        font-family: roboto;
     }
 }

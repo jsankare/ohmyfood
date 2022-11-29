@@ -859,6 +859,9 @@ main {
   .menu__hero {
     height: 280px;
   }
+  .menu__hero--senses {
+    object-position: 0 -300px;
+  }
   .starters, .courses, .desserts {
     width: 90%;
     margin: 0 auto;
@@ -889,16 +892,30 @@ main {
     overflow: hidden;
   }
   .menu__hero--french {
-    object-position: 0 -500px;
+    object-position: 0 -200px;
   }
   .menu__hero--enchanted {
     object-position: 0 -400px;
   }
   .menu__hero--senses {
-    object-position: 0 -550px;
+    object-position: 0 -150px;
   }
   .menu__hero--taste {
-    object-position: 0 -500px;
+    object-position: 0 -200px;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .menu__hero--french {
+    object-position: 0 -400px;
+  }
+  .menu__hero--enchanted {
+    object-position: 0 -200px;
+  }
+  .menu__hero--senses {
+    object-position: 0 -350px;
+  }
+  .menu__hero--taste {
+    object-position: 0 -400px;
   }
 }
 

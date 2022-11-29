@@ -148,6 +148,9 @@
 
         &__hero {
             height: 280px;
+            &--senses{
+                object-position: 0 -300px;
+            }
         }
     }
 
@@ -192,7 +195,7 @@
            overflow: hidden;
 
            &--french {
-            object-position: 0 -500px;
+            object-position: 0 -200px;
            }
 
            &--enchanted {
@@ -200,12 +203,35 @@
            }
 
            &--senses {
-            object-position: 0 -550px;
+            object-position: 0 -150px;
            }
 
            &--taste {
-            object-position: 0 -500px;
+            object-position: 0 -200px;
            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+
+    .menu {
+        &__hero {
+            &--french {
+                object-position: 0 -400px;
+               }
+    
+               &--enchanted {
+                object-position: 0 -200px;
+               }
+    
+               &--senses {
+                object-position: 0 -350px;
+               }
+    
+               &--taste {
+                object-position: 0 -400px;
+               }
         }
     }
 }

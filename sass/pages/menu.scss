@@ -13,6 +13,13 @@
     background-color: #f6f6f6;
     z-index: 1;
     position: relative;
+
+    &__hero--enchanted {
+        height: 300px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: 0 -100px;
+    }
   
     &__header {
       padding: 1rem 1rem 0 1rem;

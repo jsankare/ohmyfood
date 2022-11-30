@@ -465,7 +465,7 @@ q:before, q:after {
   -webkit-text-stroke-color: #666;
   color: transparent;
 }
-.like--active, .like:hover {
+.like:hover {
   color: purple;
   -webkit-text-stroke-width: 0;
   background: -webkit-linear-gradient(rgb(165, 25, 207), rgb(253, 162, 246));

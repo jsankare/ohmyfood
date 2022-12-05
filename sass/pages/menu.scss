@@ -74,6 +74,10 @@
                 transform: rotate(0deg);
             }
         }
+        &__validation {
+            animation: slideleft 1s;
+            animation-direction: reverse;
+        }
 
         &__header {
             box-shadow: none;

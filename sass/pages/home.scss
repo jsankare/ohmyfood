@@ -12,10 +12,21 @@ main {
     font-size: 1.2rem;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%) inset;
     text-align: center;
+    display: flex;
+    justify-content: center;
 
     & i {
         display: inline;
         margin: 5px;
+        width: 50px;
+    }
+    
+    &__text {
+        background-color: $color-localisation;
+        border: none;
+        width: 135px;
+        margin: 0;
+        font-weight: 500;
     }
 }
 

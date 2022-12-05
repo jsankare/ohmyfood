@@ -559,10 +559,20 @@ main {
   font-size: 1.2rem;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25) inset;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 .localisation i {
   display: inline;
   margin: 5px;
+  width: 50px;
+}
+.localisation__text {
+  background-color: #f3f3f3;
+  border: none;
+  width: 135px;
+  margin: 0;
+  font-weight: 500;
 }
 
 .hero {
@@ -717,6 +727,10 @@ main {
 }
 .menu__item:hover .menu__item__icon {
   transform: rotate(0deg);
+}
+.menu__item__validation {
+  animation: slideleft 1s;
+  animation-direction: reverse;
 }
 .menu__item__header {
   box-shadow: none;

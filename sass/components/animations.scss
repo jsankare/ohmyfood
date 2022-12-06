@@ -39,48 +39,6 @@
   }
 }
 
-// validation ------------------------------------------
-
-// slide-left --------------
-@keyframes slideLeft {
-  0% {
-    display: none;
-  }
-
-  100% {
-    display: flex;
-    margin: 0;
-  }
-}
-
-//rotate-left ---------------
-
-.rotateLeft {
-	-webkit-animation: rotateLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: rotateLeft 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@-webkit-keyframes rotateLeft {
-  0% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-@keyframes rotateLeft {
-  0% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-}
-
 // like fill-in ------------------------------------------
 
 @keyframes fillIn {

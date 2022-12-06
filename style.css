@@ -68,40 +68,6 @@
   animation-delay: 5s;
 }
 
-@keyframes slideLeft {
-  0% {
-    display: none;
-  }
-  100% {
-    display: flex;
-    margin: 0;
-  }
-}
-.rotateLeft {
-  -webkit-animation: rotateLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: rotateLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes rotateLeft {
-  0% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-}
-@keyframes rotateLeft {
-  0% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0);
-    transform: rotate(0);
-  }
-}
 @keyframes fillIn {
   0% {
     opacity: 0.1;
@@ -713,17 +679,11 @@ main {
   margin: 1rem 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   max-width: 100%;
-  position: relative;
   overflow: hidden;
 }
-.menu__item__validation {
-  animation: slideLeft 1s;
-  animation-fill-mode: both;
-  transition: 3s ease;
-}
 .menu__item:hover .menu__item__validation {
-  display: flex;
   cursor: pointer;
+  margin-right: 0;
 }
 .menu__item:hover .menu__item__icon {
   transform: rotate(0deg);
@@ -764,14 +724,15 @@ main {
   align-items: center;
   justify-content: center;
   transition-duration: 0.5s;
-  display: none;
   border-radius: 0 0.75rem 0.75rem 0;
   text-align: center;
+  transition: 1.5s ease;
 }
 .menu__item__icon {
   font-size: 1.5rem;
   color: white;
-  transform: rotate(90deg);
+  transform: rotate(180deg);
+  transition: transform 1.5s ease;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {

@@ -54,28 +54,21 @@
     }
 
     &__item {
-
-            &__validation {
-                animation: slideLeft 1s;
-                animation-fill-mode: both;
-                transition: 3s ease;
-            }
-
         background-color: white;
         display: flex;
         border-radius: 0.75rem;
         margin: 1rem 0;
         box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
         max-width: 100%;
-        position: relative;
         overflow: hidden;
+
         &:hover {
             .menu__item__validation {
-                display: flex;
                 cursor: pointer;
+                margin-right: 0;
             }
             .menu__item__icon {
-                transform: rotate(0deg);  
+                transform: rotate(0deg);
             }
         }
 
@@ -120,15 +113,16 @@
             align-items: center;
             justify-content: center;
             transition-duration: 0.5s;
-            display: none;
             border-radius: 0 0.75rem 0.75rem 0;
             text-align: center;
+            transition: 1.5s ease;
         }
 
         &__icon {
             font-size: 1.5rem;
             color: white;
-            transform: rotate(90deg);
+            transform: rotate(180deg);
+            transition: transform 1.5s ease;
         }
     }
 }

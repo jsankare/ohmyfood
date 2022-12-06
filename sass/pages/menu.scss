@@ -54,6 +54,13 @@
     }
 
     &__item {
+
+            &__validation {
+                animation: slideLeft 1s;
+                animation-fill-mode: both;
+                transition: 3s ease;
+            }
+
         background-color: white;
         display: flex;
         border-radius: 0.75rem;
@@ -63,20 +70,13 @@
         position: relative;
         overflow: hidden;
         &:hover {
-            transition: 3s ease;
             .menu__item__validation {
                 display: flex;
-                animation: slideLeft 1s;
-                animation-fill-mode: forwards;
                 cursor: pointer;
             }
             .menu__item__icon {
-                transform: rotate(0deg);
+                transform: rotate(0deg);  
             }
-        }
-        &__validation {
-            animation: slideleft 1s;
-            animation-direction: reverse;
         }
 
         &__header {

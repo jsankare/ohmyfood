@@ -716,21 +716,17 @@ main {
   position: relative;
   overflow: hidden;
 }
-.menu__item:hover {
+.menu__item__validation {
+  animation: slideLeft 1s;
+  animation-fill-mode: both;
   transition: 3s ease;
 }
 .menu__item:hover .menu__item__validation {
   display: flex;
-  animation: slideLeft 1s;
-  animation-fill-mode: forwards;
   cursor: pointer;
 }
 .menu__item:hover .menu__item__icon {
   transform: rotate(0deg);
-}
-.menu__item__validation {
-  animation: slideleft 1s;
-  animation-direction: reverse;
 }
 .menu__item__header {
   box-shadow: none;
